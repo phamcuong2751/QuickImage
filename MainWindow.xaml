@@ -1,0 +1,44 @@
+﻿<Window x:Class="QuickImage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuickImage"
+        mc:Ignorable="d"
+        Title="Qiuck Image" Height="435" Width="733.667"
+        Background="#FF142850" WindowStartupLocation="CenterScreen" Visibility="Visible" Icon="passion-min.png">
+    <Window.BindingGroup>
+        <BindingGroup/>
+    </Window.BindingGroup>
+    <Canvas RenderTransformOrigin="0.5,0.5" Background="#FFABABAB">
+        <Image x:Name="imageName" Height="410.667" Width="730.333"
+               Source="./img/Slide0.png" Canvas.Left="-3.333">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="./img/Slide0.PNG"/>
+            </Image.OpacityMask>
+        </Image>
+        <Rectangle Height="410.667" Width="730.333" Canvas.Left="-3.333">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.4,0">
+                    <GradientStop Color="#D827496D" Offset="0.983"/>
+                    <GradientStop Offset="0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle 
+                   Height="308" 
+                   Canvas.Top="42.879" 
+                   Width="400" Fill="#E5142850" VerticalAlignment="Center" Canvas.Left="-3.333"
+                   />
+        <TextBlock x:Name="textBlock" Height="77.556" Canvas.Left="18.667" TextWrapping="Wrap" Canvas.Top="68.888" Width="354" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"><Run FontSize="27" Text="NHỮNG "/><Run FontWeight="Bold" FontSize="27" Text="CÂU NÓI "/><Run FontSize="27" Text="HAY"/><LineBreak/><Run FontSize="27" Text="TẠO ĐỘNG LỰC"/></TextBlock>
+        <TextBlock x:Name="textContent" Height="126.556" Canvas.Left="18.667" TextWrapping="Wrap" Canvas.Top="151.444" Width="354" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Foreground="WhiteSmoke" FontSize="24.75" Text="Keep going. Everything you need will come to you at the perfect time."/></TextBlock>
+
+        <Button
+            Height="40"
+            Width="200" Canvas.Left="18.667" Canvas.Top="278"
+            Content="HÃY CHO TÔI MỘT CÂU NÓI" FontWeight="Bold"
+            Style="{DynamicResource RoundCorner}" HorizontalAlignment="Center" Click="Button_Click"
+            x:Name="buttonClick" VerticalAlignment="Center"
+            />
+    </Canvas>
+</Window>
